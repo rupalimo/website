@@ -259,12 +259,11 @@ header p a:nth-child(4) {
 
 .how-we-cared .carousel__nav {
 	position: absolute;
-	width: 40px;
-	height: 40px;
-	padding: 10px;
-	z-index: 10px;
+	width: 50%;
+	height: 100%;
+	z-index: 10;
 	cursor: pointer;
-	font-size: 18px;
+	opacity: 0;
 }
 
 .how-we-cared .carousel__nav:active {
@@ -272,13 +271,21 @@ header p a:nth-child(4) {
 }
 
 .how-we-cared .carousel__nav.carousel1--btn-prv {
-	top: 45%;
+	top: 0;
 	left: 0;
 }
 
+.how-we-cared .carousel__nav.carousel1--btn-prv:hover {
+	cursor: w-resize;
+}
+
 .how-we-cared .carousel__nav.carousel1--btn-nxt {
-	top: 45%;
+	top: 0;
 	right: 0;
+}
+
+.how-we-cared .carousel__nav.carousel1--btn-nxt:hover {
+	cursor: e-resize;
 }
 
 .how-we-cared .link--button-active {
@@ -475,6 +482,29 @@ header p a:nth-child(4) {
 
 .dripdrop__text {
 	text-align: center;
+}
+
+.both-instrument-sound {
+	grid-row: 4;
+	grid-column: 3;
+	align-content: flex-end;
+	justify-content: flex-end;
+}
+.both__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.both-instrument-sound img {
+	height: auto;
+	width: 100%;
+}
+
+.both__text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .r29style {
