@@ -172,8 +172,9 @@ header p a:nth-child(4) {
 .rekha .rekha__wrapper {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	margin-right: 2rem;
+	    align-items: center;
+    transform: translateX(4vw);
+}
 }
 
 .rekha .rekha__text {
@@ -349,8 +350,8 @@ header p a:nth-child(4) {
 }
 
 .volume-i {
-	grid-row: 8;
-	grid-column: 3;
+	grid-row: 7;
+	grid-column: 1;
 	justify-content: flex-end;
 }
 
@@ -365,7 +366,7 @@ header p a:nth-child(4) {
 
 .foreign-film {
 	grid-row: 7;
-	grid-column: 2;
+	grid-column: 3;
 	justify-content: flex-end;
 }
 
@@ -375,6 +376,21 @@ header p a:nth-child(4) {
 }
 
 .foreign-film > p {
+	text-align: center;
+}
+
+.stones-throw {
+	grid-row: 7;
+	grid-column: 2;
+	justify-content: flex-end;
+}
+
+.stones-throw img {
+	width: 100%;
+	height: auto;
+}
+
+.stones-throw > p {
 	text-align: center;
 }
 
@@ -454,8 +470,8 @@ header p a:nth-child(4) {
 }
 
 .nang {
-	grid-row: 7;
-	grid-column: 1;
+	grid-row: 8;
+	grid-column: 3;
 	justify-content: flex-end;
 	align-items: flex-end;
 	width: 100%;
