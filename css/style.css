@@ -78,8 +78,8 @@ header p a {
 	text-decoration: none;
 }
 
-header p a:nth-child(3),
-header p a:nth-child(4) {
+header p a:nth-child(2),
+header p a:nth-child(3) {
 	color: var(--accent-color);
 }
 
