@@ -530,11 +530,28 @@ header p a:nth-child(3) {
 	text-align: center;
 }
 
+.sanghumfilm {
+	grid-row: 10;
+	grid-column: 2;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.sanghumfilm img {
+	width: 80%;
+	height: auto;
+}
+
+.sanghumfilm > p {
+	text-align: center;
+	width: 75%;
+}
 
 .before-law {
 	grid-row: 10;
 	grid-column: 3;
 	justify-content: flex-end;
+		align-items: center;
 }
 
 .before-law img {
