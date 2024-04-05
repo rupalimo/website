@@ -530,6 +530,23 @@ header p a:nth-child(3) {
 	text-align: center;
 }
 
+
+.before-law {
+	grid-row: 10;
+	grid-column: 3;
+	justify-content: flex-end;
+}
+
+.before-law img {
+	width: 100%;
+	height: auto;
+}
+
+.before-law > p {
+	text-align: center;
+}
+
+
 .dripdrop {
 	grid-row: 4;
 	grid-column: 2;
