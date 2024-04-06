@@ -169,18 +169,17 @@ header p a:nth-child(3) {
 	align-content: flex-start;
 }
 
-.rekha .rekha__wrapper {
-	display: flex;
-	flex-direction: column;
-	    align-items: center;
-    transform: translateX(4vw);
-}
-}
-
-.rekha .rekha__text {
+.rekha__wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	transform: translateX(4vw);
+}
+
+.rekha__text {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 
 .rekha img {
@@ -432,6 +431,7 @@ header p a:nth-child(3) {
 	flex-direction: column;
 	width: 80%;
 	align-items: center;
+	text-align: center;
 }
 
 .richie-shazam--visuals video,
@@ -491,18 +491,13 @@ header p a:nth-child(3) {
 	align-items: flex-end;
 	width: 100%;
 }
-.nang .nang__wrapper {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
 
 .nang img {
 	width: 100%;
 	height: auto;
 }
 
-.nang p {
+.nang > p {
 	text-align: center;
 	width: 90%;
 }
@@ -551,7 +546,7 @@ header p a:nth-child(3) {
 	grid-row: 10;
 	grid-column: 3;
 	justify-content: flex-end;
-		align-items: center;
+	align-items: center;
 }
 
 .before-law img {
@@ -562,7 +557,6 @@ header p a:nth-child(3) {
 .before-law > p {
 	text-align: center;
 }
-
 
 .dripdrop {
 	grid-row: 4;
@@ -661,6 +655,7 @@ header p a:nth-child(3) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 
 .r29style img {
@@ -684,6 +679,10 @@ header p a:nth-child(3) {
 	align-items: center;
 }
 
+.bds-wix__text  {
+	text-align: center;
+}
+
 .bds-wix img {
 	width: 100%;
 }
@@ -694,16 +693,140 @@ footer div.white-space {
 }
 
 @media (max-width: 1024px) {
+	body main {
+		font-size: 24px;
+	}
 }
-/* #grid {
-    grid-template-columns: repeat(auto-fit, minmax(0, 130px));
-} */
 
 /* reference website grid
 https://balestraroma.com/en/collections/fw23/ */
 
-@media (max-width: 790px) {
-}
+@media (max-width: 640px) {
+	header p {
+		grid-column: 2 /4;
+		text-align: justify;
+		padding: 0 0.75rem 0 0.5rem;
+	}
 
-@media (max-width: 420px) {
+	main.portfolio {
+		padding: 4rem 0;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(10, auto);
+		width: 100%;
+		grid-row-gap: 4rem;
+		font-size: 24px;
+	}
+
+	main.portfolio > article {
+		grid-column: 1;
+		width: 100%;
+	}
+
+		main.portfolio > article:not(:last-of-type)::after {
+content: " ";
+width: 100%;
+border-bottom: 1px dashed var(--accent-color);
+transform: translateY(2rem);
+font-size: 12px;
+font-family: 'Courier New', Courier, monospace;
+	}
+
+
+	.rekha {
+		grid-row: 2;
+
+	}
+
+	.rekha__wrapper {
+		transform: translateX(-4vw);
+	}
+	.artworkers {
+		grid-row: 3;
+	}
+	.how-we-cared {
+		grid-row: 4;
+	}
+	.takpham {
+		grid-row: 5;
+	}
+	.richie-shazam {
+		grid-row: 6;
+	}
+
+	.richie-shazam--visuals, .richie-shazam--text {
+		width: 100%;
+	
+	}
+
+	.imagining-futures {
+		grid-row: 7;
+	}
+	.dripdrop {
+		grid-row: 8;
+	}
+	.ifetid {
+		grid-row: 9;
+	}
+.ifetid__wrapper > p {
+	width: 100%;
+}
+	.reassemblage {
+		grid-row: 10;
+	}
+	.r29style {
+		grid-row: 11;
+	}
+	.r29style__wrapper {
+		width: 100%;
+		margin: 0;
+	}
+	.bds-wix {
+		grid-row: 12;
+	}
+	.bds-wix__wrapper {
+		width: 100%;
+
+	}
+	.volume-i {
+		grid-row: 13;
+	}
+	.stones-throw {
+		grid-row: 14;
+	}
+	.foreign-film {
+		grid-row: 15;
+	}
+	.both-instrument-sound {
+		grid-row: 16;
+	}
+	.drank-recruited {
+		grid-row: 17;
+	}
+	.nang {
+		grid-row: 18;
+	}
+
+	.nang > p {
+		width: 100%;
+	} 
+	.property-journal {
+		grid-row: 19;
+	}
+	.property-journal > p {
+		width: 100%;
+	}
+
+	.aor {
+		grid-row: 20;
+	}
+	.sanghumfilm {
+		grid-row: 21;
+	}
+	.sanghumfilm > p {
+			width: 100%;
+	}
+	.before-law {
+		grid-row: 22;
+	}
 }
