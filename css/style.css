@@ -136,28 +136,6 @@ header p a:nth-child(3) {
 	color: var(--text-color);
 }
 
-.portfolio .link--button {
-	padding: 2px 4px;
-	border: 1px solid white;
-	color: var(--accent-color);
-	text-decoration: none;
-}
-
-.portfolio .link--button-active {
-	color: var(--accent-color);
-	padding: 2px 4px;
-	border: 1px solid var(--accent-color);
-	text-decoration: none;
-}
-
-.link--button:hover,
-.portfolio .link--button-active:hover {
-	border-radius: 100%;
-	padding: 2px 4px;
-	border: 1px solid var(--accent-color);
-	cursor: pointer;
-}
-
 /* SPECIFIC PROJECT STYLING */
 
 .rekha {
@@ -577,6 +555,7 @@ header p a:nth-child(3) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 
 .property-journal {
@@ -670,14 +649,21 @@ footer div.white-space {
 	}
 }
 
-/* reference website grid
-https://balestraroma.com/en/collections/fw23/ */
 
 @media (max-width: 780px) {
+ 
+	header {
+	grid-template-columns: 1fr 3fr;
+}
+ 
+	header div {
+		justify-content: flex-start;
+	}
+
 	header p {
-		grid-column: 2 /4;
+		grid-column: 2 / 3;
 		text-align: justify;
-		padding: 0 0.75rem 0 0.5rem;
+		padding: 0 0.75rem 0 0.25rem;
 	}
 
 	main.portfolio {
@@ -715,6 +701,10 @@ font-family: 'Courier New', Courier, monospace;
 	.artworkers {
 		grid-row: 3;
 	}
+
+	.artworkers__text {
+    width: 100%;
+}
 	.how-we-cared {
 		grid-row: 4;
 	}
@@ -770,7 +760,9 @@ font-family: 'Courier New', Courier, monospace;
 	}
 	.both-instrument-sound {
 		grid-row: 16;
+		transform: translateX(0);
 	}
+	
 	.drank-recruited {
 		grid-row: 17;
 	}
