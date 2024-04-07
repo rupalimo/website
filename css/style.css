@@ -776,6 +776,13 @@ font-family: 'Courier New', Courier, monospace;
 	.property-journal {
 		grid-row: 19;
 	}
+	.property-journal .mobile--only {
+		display: block;
+	}
+	.property-journal .mobile--only + img {
+		display: none;
+	}
+
 	.property-journal > p {
 		width: 100%;
 	}
