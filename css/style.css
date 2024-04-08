@@ -192,10 +192,10 @@ header p a:nth-child(3) {
 .how-we-cared {
 	grid-row: 2;
 	grid-column: 1 / 4;
-		display: flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-		justify-content: end;
+	justify-content: end;
 }
 
 .how-we-cared img {
@@ -630,7 +630,7 @@ header p a:nth-child(3) {
 	align-items: center;
 }
 
-.bds-wix__text  {
+.bds-wix__text {
 	text-align: center;
 }
 
@@ -649,13 +649,11 @@ footer div.white-space {
 	}
 }
 
-
 @media (max-width: 780px) {
- 
 	header {
-	grid-template-columns: 1fr 3fr;
-}
- 
+		grid-template-columns: 1fr 3fr;
+	}
+
 	header div {
 		justify-content: flex-start;
 	}
@@ -681,15 +679,14 @@ footer div.white-space {
 		width: 100%;
 	}
 
-		main.portfolio > article:not(:last-of-type)::after {
-content: " ";
-width: 100%;
-border-bottom: 1px dashed var(--accent-color);
-transform: translateY(2rem);
-font-size: 12px;
-font-family: 'Courier New', Courier, monospace;
+	main.portfolio > article:not(:last-of-type)::after {
+		content: ' ';
+		width: 100%;
+		border-bottom: 1px dashed var(--accent-color);
+		transform: translateY(2rem);
+		font-size: 12px;
+		font-family: 'Courier New', Courier, monospace;
 	}
-
 
 	.rekha {
 		grid-row: 2;
@@ -703,8 +700,8 @@ font-family: 'Courier New', Courier, monospace;
 	}
 
 	.artworkers__text {
-    width: 100%;
-}
+		width: 100%;
+	}
 	.how-we-cared {
 		grid-row: 4;
 	}
@@ -715,9 +712,9 @@ font-family: 'Courier New', Courier, monospace;
 		grid-row: 6;
 	}
 
-	.richie-shazam--visuals, .richie-shazam--text {
+	.richie-shazam--visuals,
+	.richie-shazam--text {
 		width: 100%;
-	
 	}
 
 	.imagining-futures {
@@ -729,9 +726,9 @@ font-family: 'Courier New', Courier, monospace;
 	.ifetid {
 		grid-row: 9;
 	}
-.ifetid__wrapper > p {
-	width: 100%;
-}
+	.ifetid__wrapper > p {
+		width: 100%;
+	}
 	.reassemblage {
 		grid-row: 10;
 	}
@@ -747,7 +744,6 @@ font-family: 'Courier New', Courier, monospace;
 	}
 	.bds-wix__wrapper {
 		width: 100%;
-
 	}
 	.volume-i {
 		grid-row: 13;
@@ -762,7 +758,7 @@ font-family: 'Courier New', Courier, monospace;
 		grid-row: 16;
 		transform: translateX(0);
 	}
-	
+
 	.drank-recruited {
 		grid-row: 17;
 	}
@@ -772,14 +768,15 @@ font-family: 'Courier New', Courier, monospace;
 
 	.nang > p {
 		width: 100%;
-	} 
+	}
 	.property-journal {
 		grid-row: 19;
 	}
-	.property-journal .mobile--only {
+	.mobile--only {
 		display: block;
 	}
-	.property-journal .mobile--only + img {
+	.mobile--only + img,
+	.mobile--only + video {
 		display: none;
 	}
 
@@ -794,7 +791,7 @@ font-family: 'Courier New', Courier, monospace;
 		grid-row: 21;
 	}
 	.sanghumfilm > p {
-			width: 100%;
+		width: 100%;
 	}
 	.before-law {
 		grid-row: 22;
