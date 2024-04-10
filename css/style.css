@@ -14,7 +14,7 @@
 	--accent-color: #2511a1;
 	--text-color: #000;
 	--text-color-secondary: #8b6c38;
-		--fade-in-effect: fadein 400ms;
+	--fade-in-effect: fadein 400ms;
 	color: var(--text-color);
 	font-family: var(--primary-font);
 	cursor: default;
@@ -83,17 +83,17 @@ body {
 
 .preloader p {
 	text-transform: uppercase;
-	font-family: var(--secondary-font);
+	padding: 0 2rem;
+
 	text-align: center;
-	padding: 0.25rem 1.25rem;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 100%;
-	background: linear-gradient(115deg, #fcfee7, #f4ff25, #dcfd62);
-	background-size: 300% 100%;
-  animation: gradient 4s linear infinite;
-  animation-direction: alternate;
-text-align: center;
-vertical-align: baseline;
+	background: linear-gradient(15deg, #f4ff25, #fbff84);
+	background-size: 180% 130%;
+	animation: gradient 4s linear infinite;
+	animation-direction: alternate;
+
+	vertical-align: baseline;
 }
 
 /* RUPALI INTRO TEXT */
