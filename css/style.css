@@ -92,6 +92,8 @@ body {
 	background-size: 300% 100%;
   animation: gradient 4s linear infinite;
   animation-direction: alternate;
+text-align: center;
+vertical-align: baseline;
 }
 
 /* RUPALI INTRO TEXT */
