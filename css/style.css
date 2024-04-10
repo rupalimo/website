@@ -36,6 +36,40 @@ body {
 	margin: 0 auto;
 }
 
+/* loading screen styling */
+#overlayer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 120px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 98;
+	background: rgba(255, 255, 255, 0.95);
+	filter: blur(12px);
+}
+
+.preloader {
+	z-index: 99;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.preloader pre {
+text-transform: uppercase;
+font-family: var(--secondary-font);
+	text-align: center;
+	padding: 2px 1rem;
+	border: 1px solid black;
+	border-radius: 100%;
+}
+
 /* RUPALI INTRO TEXT */
 
 header {

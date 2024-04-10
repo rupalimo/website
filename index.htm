@@ -15,8 +15,15 @@
   <meta property="og:title" content="rupali morzaria">
   <meta property="og:description" content=".¸¸.•༺ (c) 2022 to present ༻•.¸¸.">
   <meta property="og:image" content=“http://rupalimorzaria.com/favicon.png”>
-
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">    
+    $(window).load(function () {
+      $(".preloader").delay(1100).fadeOut("slow");
+      $("#overlayer").delay(1100).fadeOut("slow");
+    })
+    </script>
+    <script defer src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    
 	</head>
 
 	<!--
@@ -34,6 +41,12 @@ ______________________________________
         -->
 
 <body>
+
+	<div id="overlayer">
+  </div>
+  <div class="preloader">
+    <pre>Loading</pre>
+  </div>
 		<!-- 'ABOUT' STICKY ON TOP -->
 		<header id="rupali">
 			<div class="rupali-home">
