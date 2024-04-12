@@ -476,6 +476,7 @@ header p a:nth-child(3) {
 	grid-row: 1;
 	grid-column: 3;
 	justify-content: end;
+	transform: translateX(1rem);
 }
 
 .artworkers .artworkers__wrapper {
@@ -761,6 +762,7 @@ footer div.white-space {
 	}
 	.artworkers {
 		grid-row: 3;
+		transform: translateX(0);
 	}
 
 	.artworkers__text {
