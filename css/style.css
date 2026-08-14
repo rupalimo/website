@@ -13,11 +13,21 @@
 	}
 }
 
+@keyframes y-axis-rotate {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
 :root {
 	--primary-font: 'Arial', sans-serif;
 	--secondary-font: 'Times', serif;
 	--accent-color: #2511a1;
 	--text-color: #000;
+	--grey: #686868;
 	--text-color-secondary: #8b6c38;
 	--fade-in-effect: fadein 400ms;
 	color: var(--text-color);
@@ -723,17 +733,85 @@ footer div.white-space {
 	border-bottom: dotted 2px;
 	transform: unset;
 	flex-grow: 1;
-	margin: 0 0.5rem;
+	margin: 0 0.5em;
 	border-color: var(--text-color-secondary);
 }
 
-.web-list div {
-	display: grid;
-	grid-template-columns: repeat(5, auto);
+.web-list article {
+	margin: 5vh auto;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+}
+
+
+.web-list a {
+		text-decoration: none;
+}
+
+
+.web-list .web-link img { 
+	display: block;
+	margin: 0 auto 1rem auto;
+	 animation: y-axis-rotate 4s linear infinite;
+	 border: 1px solid var(--accent-color);
+	 padding: 2px;
+	 border-radius: 1rem;
+	 			height: 25vh;
+width: auto;
+}
+
+.web-list .web-link a {
+	color: var(--accent-color);
+}
+
+.web-list article:hover img {
+	opacity: 1;
+		height: 25vh;
+	width: auto;
+	transition: all 0.25s ease-in-out;
+	animation: none;
+	border: transparent;
+	box-shadow: 0.125rem 0.125rem 0.5rem var(--grey);
+
+}
+
+.web-list article:hover a {
+	text-decoration: underline;
 }
 
 .web-list div > * {
-	margin: 1rem 0;
+	margin: 0.25em 0;
+}
+
+.web-list .web-info a {
+	text-decoration: none;
+	color: var(--text-color-secondary);
+}
+
+.web-list span {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.web-list span p {
+	/* background: #ececec; */
+	padding: 1px 0.5rem 0 0.5em;
+	margin-right: 0.5em;
+	margin: 0 0.5em 0 0;
+	font-family: var(--secondary-font);
+	color: var(--grey);
+	border: 1px solid #ececec;
+}
+
+/* REQUEST CLUB */
+
+.filter {
+	-webkit-filter: url(#noise);
+	filter: url(#noise);
 }
 
 @media (max-width: 1024px) {
@@ -757,7 +835,8 @@ footer div.white-space {
 		padding: 0 0.75rem 0 0.25rem;
 	}
 
-	main.portfolio, .web-list {
+	main.portfolio,
+	.web-list {
 		padding: 4rem 0;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -767,7 +846,8 @@ footer div.white-space {
 		font-size: 24px;
 	}
 
-	main.portfolio > article, .web-list > article {
+	main.portfolio > article,
+	.web-list > article {
 		grid-column: 1;
 		width: 100%;
 	}
