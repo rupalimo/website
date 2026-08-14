@@ -14,12 +14,12 @@
 }
 
 @keyframes y-axis-rotate {
-  from {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  to {
-    transform: rotate3d(0, 1, 0, 360deg);
-  }
+	from {
+		transform: rotate3d(0, 0, 0, 0deg);
+	}
+	to {
+		transform: rotate3d(0, 1, 0, 180deg);
+	}
 }
 
 :root {
@@ -746,21 +746,21 @@ footer div.white-space {
 	width: fit-content;
 }
 
-
 .web-list a {
-		text-decoration: none;
+	text-decoration: none;
 }
 
-
-.web-list .web-link img { 
+.web-list .web-link img {
 	display: block;
 	margin: 0 auto 1rem auto;
-	 animation: y-axis-rotate 4s linear infinite;
-	 border: 1px solid var(--accent-color);
-	 padding: 2px;
-	 border-radius: 1rem;
-	 			height: 25vh;
-width: auto;
+	animation: y-axis-rotate 4s linear infinite;
+
+	animation-direction: alternate;
+	border: 1px solid var(--accent-color);
+	padding: 2px;
+	border-radius: 100%;
+	height: 25vh;
+	width: auto;
 }
 
 .web-list .web-link a {
@@ -769,13 +769,13 @@ width: auto;
 
 .web-list article:hover img {
 	opacity: 1;
-		height: 25vh;
+	height: 25vh;
 	width: auto;
 	transition: all 0.25s ease-in-out;
 	animation: none;
 	border: transparent;
 	box-shadow: 0.125rem 0.125rem 0.5rem var(--grey);
-
+	border-radius: 1rem;
 }
 
 .web-list article:hover a {
