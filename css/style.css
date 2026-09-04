@@ -868,6 +868,15 @@ footer div.white-space {
 	opacity: 0;
 }
 
+.rc .requestIndex span {
+	display: flex;
+	flex-direction: row;
+}
+
+.rc .requestIndex span > * {
+	margin: 4px;
+}
+
 .filter {
 	-webkit-filter: url(#noise);
 	filter: url(#noise);

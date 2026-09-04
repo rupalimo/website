@@ -27,7 +27,7 @@ $(document).ready(function () {
 						`">` +
 						entry.request +
 						`</p>`,
-				).appendTo('#requestList--index');
+				).appendTo('#requestEntry');
 
 				let requestSong = $(
 					`<a target="_blank" href="` +
@@ -36,11 +36,11 @@ $(document).ready(function () {
 						entry.link +
 						`">` +
 						entry.title +
-						`|` +
+						` | ` +
 						entry.artist +
-						`|` +
+						` | ` +
 						entry.year +
-						`|` +
+						` | ` +
 						entry.album +
 						`</a>`,
 				).appendTo('#requestSong');
