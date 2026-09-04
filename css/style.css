@@ -817,6 +817,10 @@ footer div.white-space {
 	position: relative;
 }
 
+.rc .logo img {
+	width: 100%;
+}
+
 .rc details {
 	border: 1px dashed black;
 	padding: 0.5rem 1rem;
@@ -826,6 +830,7 @@ footer div.white-space {
 	left: 0;
 	width: fit-content;
 	padding: 2rem;
+	background: white;
 }
 
 .rc details summary:hover {
@@ -847,28 +852,20 @@ footer div.white-space {
 }
 
 .rc .btn {
-	margin: 2rem 0 1rem 0;
+	margin: 1rem 0;
 	outline: none;
-	background: transparent;
+
 	border: none;
 	padding: 2rem;
 	font-size: 1rem;
-	background-image: linear-gradient(
-		white,
-		var(--rc-02) 10%,
-		var(--rc-02) 90%,
-		white
-	);
 }
 
 .rc .btn:hover {
-	background-image: linear-gradient(
-		white,
-		var(--rc-02) 10%,
-		var(--rc-02) 90%,
-		white
-	);
 	cursor: pointer;
+}
+
+.form-helper {
+	opacity: 0;
 }
 
 .filter {
