@@ -28,6 +28,8 @@
 	--accent-color: #2511a1;
 	--text-color: #000;
 	--grey: #686868;
+	--rc-01: #94f8aa;
+	--rc-02: rgb(218, 127, 238);
 	--text-color-secondary: #8b6c38;
 	--fade-in-effect: fadein 400ms;
 	color: var(--text-color);
@@ -754,7 +756,7 @@ footer div.white-space {
 	display: block;
 	margin: 0 auto 1rem auto;
 	animation: y-axis-rotate 4s linear infinite;
-
+	filter: hue-rotate(0.7turn) contrast(0.5);
 	animation-direction: alternate;
 	border: 1px solid var(--accent-color);
 	padding: 2px;
@@ -808,6 +810,66 @@ footer div.white-space {
 }
 
 /* REQUEST CLUB */
+
+.rc {
+	width: clamp(45ch, 60vw, 75ch);
+	height: calc(100vh - 2rem);
+	position: relative;
+}
+
+.rc details {
+	border: 1px dashed black;
+	padding: 0.5rem 1rem;
+	border-style: none dashed dashed none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: fit-content;
+	padding: 2rem;
+}
+
+.rc details summary:hover {
+	cursor: pointer;
+}
+
+.rc details[open] {
+	width: 100%;
+	background: white;
+}
+
+.rc details[open] summary {
+	color: var(--grey);
+}
+
+.rc form {
+	display: flex;
+	flex-direction: column;
+}
+
+.rc .btn {
+	margin: 2rem 0 1rem 0;
+	outline: none;
+	background: transparent;
+	border: none;
+	padding: 2rem;
+	font-size: 1rem;
+	background-image: linear-gradient(
+		white,
+		var(--rc-02) 10%,
+		var(--rc-02) 90%,
+		white
+	);
+}
+
+.rc .btn:hover {
+	background-image: linear-gradient(
+		white,
+		var(--rc-02) 10%,
+		var(--rc-02) 90%,
+		white
+	);
+	cursor: pointer;
+}
 
 .filter {
 	-webkit-filter: url(#noise);

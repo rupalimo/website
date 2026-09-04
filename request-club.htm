@@ -15,29 +15,13 @@
 		<meta property="og:title" content="rupali morzaria" />
 		<meta
 			property="og:description"
-			content=".¸¸.•༺ (c) 2022 to present ༻•.¸¸."
+			content=".¸¸.•༺ (c) 2021 to present ༻•.¸¸."
 		/>
 	</head>
 
 	<!-- this website was designed & developed in plain html + css by rupali, also known online as shabana_asthma || font family: Arial & Times New Roman || last updated: April 8, 2024 -->
 
 	<body>
-		<!-- 'ABOUT' STICKY ON TOP -->
-		<header id="rupali">
-			<div class="rupali-home">
-				<a href="#rupali" title="" alt=""
-					>Rupali Morzaria
-					<!-- Write your comments here --></a
-				>
-			</div>
-			<span class="line">
-				<p>'s</p>
-				<hr />
-				<p>websites</p></span
-			>
-		</header>
-
-		<!-- SVG filters -->
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
 			<defs>
 				<filter id="noise" x="0%" y="0%" width="100%" height="100%">
@@ -58,15 +42,45 @@
 			</defs>
 		</svg>
 
-		<!-- PROJECT GALLERY -->
-		<main class="filter"></main>
+		<header></header>
 
-		<footer>
-			<p>
-				thank you to the many people sharing their work online that have
-				inspired and helped me experiment wi
-			</p>
-			<div class="white-space"></div>
-		</footer>
+		<main class="rc">
+			<details>
+				<summary>Make a request...</summary>
+				<div id="requestForm" class="request__form">
+					<form name="requestClub-form" action="">
+<input type="hidden" name="submissions" value="submissions" />
+						
+						<p><label for="user">Username</label></p>
+						<input type="text" id="user" name="user" />
+						<p>
+							<label for="request"
+								>Describe what sort of vibe / mood / feeling / ambiance you are
+								looking for? Be as specific or vague as you wish.</label
+							>
+						</p>
+						<input id="request" name="request"></input>
+						<button type="submit" class="btn">Send</button>
+					</form>
+				</div>
+			</details>
+			<section class="logo">
+				<img src="" alt="" />
+			</section>
+		</main>
+
+		<footer></footer>
+		<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbxziwqk0QdRhvTOvFoTQ3dL3R0zOkCtmlbBwZFz_sPNzbdbtBOy1skLoGJgmXVZFKXqIA/exec'
+	const form = document.forms['requestClub-form']
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 	</body>
 </html>
