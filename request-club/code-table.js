@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 				let requestEntry = $(
-					`<p  data-filter-type="` +
+					`<span><p  data-filter-type="` +
 						entry.date +
 						`">&#91;` +
 						entry.date +
@@ -26,11 +26,7 @@ $(document).ready(function () {
 						entry.request +
 						`">` +
 						entry.request +
-						`</p>`,
-				).appendTo('#requestEntry');
-
-				let requestSong = $(
-					`<a target="_blank" href="` +
+						`</p></span><div><a target="_blank" href="` +
 						entry.link +
 						`" data-filter-type="` +
 						entry.link +
@@ -42,8 +38,8 @@ $(document).ready(function () {
 						entry.year +
 						` | ` +
 						entry.album +
-						`</a>`,
-				).appendTo('#requestSong');
+						`</a></div>`,
+				).appendTo('#requestIndex');
 			});
 		},
 	);
