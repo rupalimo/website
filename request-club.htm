@@ -42,50 +42,47 @@
 			</defs>
 		</svg>
 
-		<header></header>
+		<header>
+			<div class="logo">
+				<img src="" alt="" />
+			</div>
+		</header>
 
 		<main class="rc">
-			<details>
-				<summary>Make a request...</summary>
-				<div class="request__form">
-					<form
-						id="requestForm"
-						name="requestClub-form"
-						method="POST"
-						action="https://script.google.com/macros/s/AKfycbzp6yMrHVokzMtaboFPynhjSzo6r016iPFW1CaHkXDFXI_LwhDDTPSYg6_b58wGUThGwg/exec"
-					>
-						<input type="hidden" name="submissions" value="submissions" />
+			<section class="request-index" id="requestIndex"></section>
+			<section class="make-a-request">
+				<details>
+					<summary>Make a request...</summary>
+					<div class="request__form">
+						<form
+							id="requestForm"
+							name="requestClub-form"
+							method="POST"
+							action="https://script.google.com/macros/s/AKfycbzp6yMrHVokzMtaboFPynhjSzo6r016iPFW1CaHkXDFXI_LwhDDTPSYg6_b58wGUThGwg/exec"
+						>
+							<input type="hidden" name="submissions" value="submissions" />
 
-						<p><label for="user">Username</label></p>
-						<input type="text" name="user" />
-						<p><label for="Email">Email</label></p>
-						<input name="Email" type="email" placeholder="Email" required />
-						<input name="Name" type="text" placeholder="Name" required />
-						<p>
-							<label for="request"
-								>Describe what sort of vibe / mood / feeling / ambiance you are
-								looking for? Be as specific or vague as you wish.</label
-							>
-						</p>
-						<input
-							id="request"
-							name="request"
-							type="text"
-							placeholder="I am looking for..."
-							maxlength="250"
-							pattern="[^=+\-@].*"
-						/>
-						<div class="form-helper">
-							<label>If you are human, leave this blank:</label>
-							<input type="text" name="mobile_number" />
-						</div>
-						<button type="submit" class="btn">Send</button>
-					</form>
-				</div>
-			</details>
-			<section class="logo">
-				<img src="" alt="" />
-				<div id="requestIndex"></div>
+							<input name="Name" type="text" placeholder="USER" required />
+
+							<input name="Email" type="email" placeholder="EMAIL" required />
+
+							<input
+								id="request"
+								name="Request"
+								type="text"
+								placeholder="SONG REQUEST"
+								maxlength="250"
+								pattern="[^=+\-@].*"
+							/>
+							<div class="form-helper">
+								<label>If you are human, leave this blank:</label>
+								<input type="text" name="mobile_number" />
+							</div>
+
+							<button type="submit" class="btn">Send</button>
+						</form>
+					</div>
+				</details>
 			</section>
 		</main>
 

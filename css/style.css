@@ -812,28 +812,38 @@ footer div.white-space {
 /* REQUEST CLUB */
 
 .rc {
-	width: clamp(45ch, 60vw, 75ch);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
 	height: calc(100vh - 2rem);
-	position: relative;
 }
 
-.rc .logo img {
-	width: 100%;
+.rc section {
+	width: clamp(200px, 50%, 800px);
 }
 
 .rc details {
 	border: 1px dashed black;
 	padding: 0.5rem 1rem;
-	border-style: none dashed dashed none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: fit-content;
+	width: 100%;
+	height: 100%;
 	padding: 2rem;
 	background: white;
+	position: relative;
 }
 
-.rc details summary:hover {
+.rc summary {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.rc summary::marker {
+	content: '';
+}
+
+.rc summary:hover {
 	cursor: pointer;
 }
 
