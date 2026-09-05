@@ -925,6 +925,17 @@ footer div.white-space {
 	margin: 4px;
 }
 
+.logo {
+	position: fixed;
+	z-index: -1;
+	width: inherit;
+	height: calc(100vh - 2rem);
+}
+
+.logo img {
+	width: 100%;
+}
+
 .filter {
 	-webkit-filter: url(#noise);
 	filter: url(#noise);
