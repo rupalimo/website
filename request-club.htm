@@ -47,14 +47,20 @@
 		<main class="rc">
 			<details>
 				<summary>Make a request...</summary>
-				<div id="requestForm" class="request__form">
-					<form name="requestClub-form" action="">
+				<div class="request__form">
+					<form
+						id="requestForm"
+						name="requestClub-form"
+						method="POST"
+						action="https://script.google.com/macros/s/AKfycbzp6yMrHVokzMtaboFPynhjSzo6r016iPFW1CaHkXDFXI_LwhDDTPSYg6_b58wGUThGwg/exec"
+					>
 						<input type="hidden" name="submissions" value="submissions" />
 
 						<p><label for="user">Username</label></p>
 						<input type="text" name="user" />
-						<p><label for="email">Email</label></p>
-						<input name="email" type="email" placeholder="Email" required />
+						<p><label for="Email">Email</label></p>
+						<input name="Email" type="email" placeholder="Email" required />
+						<input name="Name" type="text" placeholder="Name" required />
 						<p>
 							<label for="request"
 								>Describe what sort of vibe / mood / feeling / ambiance you are
@@ -85,30 +91,20 @@
 
 		<footer></footer>
 		<script>
-			async function submitContactForm(formData) {
-				try {
-					const response = await fetch(
-						'https://script.google.com/macros/s/AKfycbyCN99Q5YOf2h0kMopDpE6J-9RAXj_Zmkjnv3-BYL3pfXDvunStTe1WQCqTwK_UCsQqew/exec',
-						{
-							method: 'POST',
-							body: JSON.stringify({
-								name: formData.user,
-								email: formData.email,
-								message: formData.request,
-							}),
-						},
-					);
-
-					const result = await response.json();
-					if (result.status === 'success') {
-						alert('Message sent successfully!');
-					} else {
-						alert('Error: ' + result.message);
-					}
-				} catch (error) {
-					alert('Failed to submit form: ' + error.message);
-				}
-			}
+			window.addEventListener('load', function () {
+				const form = document.getElementById('requestForm');
+				form.addEventListener('submit', function (e) {
+					e.preventDefault();
+					const data = new FormData(form);
+					const action = e.target.action;
+					fetch(action, {
+						method: 'POST',
+						body: data,
+					}).then(() => {
+						alert('Success!');
+					});
+				});
+			});
 		</script>
 		<script
 			src="https://code.jquery.com/jquery-3.6.0.min.js"
