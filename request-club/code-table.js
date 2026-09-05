@@ -11,7 +11,7 @@ $(document).ready(function () {
 				console.log(entry);
 
 				if (index == 0) return;
-				let requestEntry = $(
+				let requestIndex = $(
 					`<span><p  data-filter-type="` +
 						entry.date +
 						`">&#91;` +

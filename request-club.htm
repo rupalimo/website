@@ -52,7 +52,9 @@
 						<input type="hidden" name="submissions" value="submissions" />
 
 						<p><label for="user">Username</label></p>
-						<input type="text" id="user" name="user" />
+						<input type="text" name="user" />
+						<p><label for="email">Email</label></p>
+						<input name="email" type="email" placeholder="Email" required />
 						<p>
 							<label for="request"
 								>Describe what sort of vibe / mood / feeling / ambiance you are
@@ -76,24 +78,37 @@
 				</div>
 			</details>
 			<section class="logo">
-				<img src="request-club/black-cover.jpg" alt="" />
+				<img src="" alt="" />
 				<div id="requestIndex"></div>
 			</section>
 		</main>
 
 		<footer></footer>
 		<script>
-			const scriptURL =
-				'https://script.google.com/macros/s/AKfycbylWlMr9NT2vlIGEtytnrOqF5tNwYbwSgaKUYqpAsEHYOUOzMviIE6qoz40Jgc81WrotA/exec';
-			const form = document.forms['requestClub-form'];
+			async function submitContactForm(formData) {
+				try {
+					const response = await fetch(
+						'https://script.google.com/macros/s/AKfycbyCN99Q5YOf2h0kMopDpE6J-9RAXj_Zmkjnv3-BYL3pfXDvunStTe1WQCqTwK_UCsQqew/exec',
+						{
+							method: 'POST',
+							body: JSON.stringify({
+								name: formData.user,
+								email: formData.email,
+								message: formData.request,
+							}),
+						},
+					);
 
-			form.addEventListener('submit', (e) => {
-				e.preventDefault();
-				fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-					.then((response) => response.json())
-					.then((response) => console.log('Success!', response))
-					.catch((error) => console.error('Error!', error.message));
-			});
+					const result = await response.json();
+					if (result.status === 'success') {
+						alert('Message sent successfully!');
+					} else {
+						alert('Error: ' + result.message);
+					}
+				} catch (error) {
+					alert('Failed to submit form: ' + error.message);
+				}
+			}
 		</script>
 		<script
 			src="https://code.jquery.com/jquery-3.6.0.min.js"
