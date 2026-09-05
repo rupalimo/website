@@ -818,8 +818,45 @@ footer div.white-space {
 	height: calc(100vh - 2rem);
 }
 
-.rc section {
-	width: clamp(200px, 50%, 800px);
+.rc .request__index span {
+	display: flex;
+	flex-direction: row;
+}
+
+.rc .request__index span p + p {
+	margin-left: 0.25rem;
+}
+
+.rc .request__index .date::before {
+	content: '\005B';
+}
+
+.rc .request__index .date::after {
+	content: '\005D';
+}
+
+.rc .request__index .user::before {
+	content: '\003C';
+}
+
+.rc .request__index .user::after {
+	content: '\003E';
+}
+
+.rc .request__index .request::before {
+	content: '';
+}
+
+.rc .request__index .request::after {
+	content: '';
+}
+
+.rc section:first-of-type {
+	flex-grow: 1;
+}
+
+.rc section + section {
+	width: clamp(225px, 20vw, 500px);
 }
 
 .rc details {
@@ -837,6 +874,7 @@ footer div.white-space {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	width: max-content;
 }
 
 .rc summary::marker {

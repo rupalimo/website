@@ -12,17 +12,17 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 				let requestIndex = $(
-					`<span><p  data-filter-type="` +
+					`<span><p class="date"  data-filter-type="` +
 						entry.date +
-						`">&#91;` +
+						`">` +
 						entry.date +
-						`&#93;</p>
-						<p data-filter-type="` +
+						`</p>
+						<p class="user" data-filter-type="` +
 						entry.user +
-						`">&#60;` +
+						`">` +
 						entry.user +
-						`&#62;</p>
-						<p data-filter-type="` +
+						`</p>
+						<p class="request" data-filter-type="` +
 						entry.request +
 						`">` +
 						entry.request +
