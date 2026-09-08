@@ -811,13 +811,28 @@ footer div.white-space {
 
 /* REQUEST CLUB */
 
-.rc {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap-reverse;
-	height: calc(100vh - 2rem);
+.rc-bod {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+}
+.texture {
+	background-image: url('../request-club/tex-02.jpg');
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	filter: grayscale(100%) invert(80%) blur(0px) contrast(10) opacity(10%);
+	background-size: cover;
 }
 
+.rc .request__index {
+	width: clamp(370px, 60vw, 800px);
+	margin: 0 auto;
+}
 .rc .request__index span {
 	display: flex;
 	flex-direction: row;
@@ -837,18 +852,36 @@ footer div.white-space {
 }
 .rc .request__index .date::before {
 	content: '\005B';
+	color: var(--text-color);
 }
 
 .rc .request__index .date::after {
 	content: '\005D';
+	color: var(--text-color);
 }
 
-.rc .request__index .user::before {
+.rc .request__index .date {
+	color: var(--text-color-secondary);
+	margin-right: 0.25rem;
+}
+
+.rc .request__index .user::before,
+.rc .request__index .user[data-filter=''] + pre::before {
 	content: '\003C';
+	color: var(--text-color);
 }
 
-.rc .request__index .user::after {
+.rc .request__index .user::after,
+.rc .request__index .user[data-filter=''] + pre::after {
 	content: '\003E';
+	color: var(--text-color);
+}
+
+.rc .request__index .user,
+.rc .request__index pre {
+	color: var(--grey);
+	/* color: var(--rc-01); */
+	margin-right: 0.25rem;
 }
 
 .rc .request__index .user[data-filter=''],
@@ -869,30 +902,43 @@ footer div.white-space {
 	content: '';
 }
 
+.rc .request__index .request {
+	color: var(--rc-02);
+}
+
 .rc section:first-of-type {
 	flex-grow: 1;
 }
 
-.rc section + section {
-	width: clamp(225px, 20vw, 500px);
+.rc .request__index .requested:hover {
+	opacity: 0;
+	/* -webkit-transform: translate(-500em, 0em);
+	-webkit-transition-duration: 100s; */
 }
 
-.rc details {
-	border: 1px dashed black;
-	padding: 0.5rem 1rem;
-	width: 100%;
-	height: 100%;
-	padding: 2rem;
-	background: white;
+.rc section + section {
+	/* width: clamp(225px, 20vw, 500px); */
 	position: relative;
 }
 
-.rc summary {
-	position: absolute;
-	left: 50%;
+.rc details {
+	/* border: 1px dotted black; */
+	padding: 0.5rem;
+	background: white;
+	position: fixed;
+	right: 50%;
 	top: 50%;
-	transform: translate(-50%, -50%);
-	width: max-content;
+	transform: translate(50%, -50%);
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+.rc summary {
+	padding: 1px 4px;
+	border: 1px solid var(--text-color);
+	color: var(--grey);
+	text-transform: uppercase;
 }
 
 .rc summary::marker {
@@ -901,29 +947,56 @@ footer div.white-space {
 
 .rc summary:hover {
 	cursor: pointer;
+	/* box-shadow: 0 0 0 1px var(--text-color) inset; */
+	color: var(--text-color);
 }
 
 .rc details[open] {
-	width: 100%;
-	background: white;
+	background: transparent;
+	/* border: 1px solid transparent; */
+	width: 41.5%;
 }
 
 .rc details[open] summary {
 	color: var(--grey);
+	z-index: -1;
+	position: absolute;
 }
 
-.rc form {
+.rc .request__form form {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	font-size: 2rem;
+	width: 100%;
+	height: 100%;
+}
+
+.rc .request__form input,
+.rc .request__form input:focus,
+.rc .request__form button {
+	border: 1px solid var(--text-color);
+	outline: none;
+	font-size: 1rem;
+}
+
+.rc .request__form input:focus {
+	background: var(--rc-02);
+}
+
+.rc .request__form input {
+	width: inherit;
+	margin-right: -1px;
+}
+
+.rc .request__form button {
+}
+
+.rc .request__form input:active,
+.rc .request__form input:focus {
+	border-bottom: 1px solid var(--accent-color);
 }
 
 .rc .btn {
-	margin: 1rem 0;
-	outline: none;
-
-	border: none;
-	padding: 2rem;
-	font-size: 1rem;
 }
 
 .rc .btn:hover {
@@ -931,7 +1004,7 @@ footer div.white-space {
 }
 
 .form-helper {
-	opacity: 0;
+	display: none;
 }
 
 .rc .requestIndex span {
@@ -948,6 +1021,7 @@ footer div.white-space {
 	z-index: -1;
 	width: inherit;
 	height: calc(100vh - 2rem);
+	mix-blend-mode: multiply;
 }
 
 .logo img {
@@ -957,6 +1031,20 @@ footer div.white-space {
 .filter {
 	-webkit-filter: url(#noise);
 	filter: url(#noise);
+}
+
+/* .rotateX {
+	transform-origin: 50% 0;
+	-webkit-transform: skewX(4deg) rotate(4deg);
+	-moz-transform: skewX(4deg) rotate(4deg);
+	-ms-transform: skewX(4deg) rotate(4deg);
+} */
+
+.rotate {
+	transform-origin: 30% 0;
+	-webkit-transform: skewX(-12deg) rotate(-12deg) translateX(1rem);
+	-moz-transform: skewX(-12deg) rotate(-12deg) translateX(1rem);
+	-ms-transform: skewX(-12deg) rotate(-12deg) translateX(1rem);
 }
 
 @media (max-width: 1024px) {

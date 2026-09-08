@@ -12,9 +12,7 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 				let requestIndex = $(
-					`<span data-filter="` +
-						entry.new +
-						`"><p class="date" data-filter="` +
+					`<span><p class="date" data-filter="` +
 						entry.Date +
 						`">` +
 						entry.Date +
@@ -23,12 +21,12 @@ $(document).ready(function () {
 						entry.Name +
 						`">` +
 						entry.Name +
-						`</p><pre>&#60;anonymous&#62;</pre></span>
+						`</p><pre>anonymous</pre></span>
 						<p class="request" data-filter="` +
 						entry.Request +
 						`">` +
 						entry.Request +
-						`</p></span><div data-filter="` +
+						`</p></span><div class="requested" data-filter="` +
 						entry.link +
 						`"><a target="_blank" href="` +
 						entry.link +
