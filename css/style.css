@@ -827,6 +827,14 @@ footer div.white-space {
 	margin-left: 0.25rem;
 }
 
+.rc .request__index div[data-filter='undefined'] > * {
+	display: none;
+}
+
+.rc .request__index div[data-filter='undefined']::before {
+	content: 'new request';
+	font-style: italic;
+}
 .rc .request__index .date::before {
 	content: '\005B';
 }
@@ -841,6 +849,16 @@ footer div.white-space {
 
 .rc .request__index .user::after {
 	content: '\003E';
+}
+
+.rc .request__index .user[data-filter=''],
+.rc .request__index .user + pre {
+	display: none;
+}
+
+.rc .request__index .user[data-filter=''] + pre {
+	display: block;
+	font-family: var(--primary-font);
 }
 
 .rc .request__index .request::before {

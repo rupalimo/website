@@ -1,5 +1,5 @@
 var SPREADSHEET_ID_AND_TAB =
-	'1l08Sdxv8DRXcq9InKoGzVIIGw-yL3_teI-2C1wcHK6s/posted';
+	'1l08Sdxv8DRXcq9InKoGzVIIGw-yL3_teI-2C1wcHK6s/submissions';
 
 $(document).ready(function () {
 	$.getJSON(
@@ -12,23 +12,25 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 				let requestIndex = $(
-					`<span><p class="date"  data-filter-type="` +
-						entry.date +
+					`<span data-filter="` +
+						entry.new +
+						`"><p class="date" data-filter="` +
+						entry.Date +
 						`">` +
-						entry.date +
+						entry.Date +
 						`</p>
-						<p class="user" data-filter-type="` +
-						entry.user +
+						<span><p class="user" data-filter="` +
+						entry.Name +
 						`">` +
-						entry.user +
-						`</p>
-						<p class="request" data-filter-type="` +
-						entry.request +
+						entry.Name +
+						`</p><pre>&#60;anonymous&#62;</pre></span>
+						<p class="request" data-filter="` +
+						entry.Request +
 						`">` +
-						entry.request +
-						`</p></span><div><a target="_blank" href="` +
+						entry.Request +
+						`</p></span><div data-filter="` +
 						entry.link +
-						`" data-filter-type="` +
+						`"><a target="_blank" href="` +
 						entry.link +
 						`">` +
 						entry.title +
